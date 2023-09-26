@@ -1,0 +1,48 @@
+﻿
+<link href="~/css/FormDesign.css" rel="stylesheet" />
+
+<div class="container">
+    <form action="Create" method="post" enctype="multipart/form-data">
+        <div class="row">
+            <div class="col-25">
+                <label for="fname">Name</label>
+            </div>
+            <div class="col-75">
+                <input type="text" id="Name" name="StudentName" placeholder="Your Name....">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-25">
+                <label for="Iname">Age</label>
+            </div>
+            <div class="col-75">
+                <input type="text" id="Age" name="StudentAge" placeholder="Your Age....">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-25">
+                <label for="Iname">Is Active</label>
+            </div>
+            <div class="col-75">
+                <input type="checkbox" id="isactive" value="true" name=" IsActive" checked>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-25">
+                <label for="Iname">Student photo</label>
+            </div>
+            <div class="col-75">
+              <input type="file" name="StudentPhoto" />
+            </div>
+        </div>
+        <div class="row">
+            <input type="submit" value="Save">
+        </div>
+
+    </form>
+
+</div>
+
+

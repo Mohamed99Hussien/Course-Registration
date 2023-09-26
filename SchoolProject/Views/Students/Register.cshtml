@@ -1,0 +1,47 @@
+﻿@model SchoolProject.Models.ViewModels.StudentCourseVM
+    <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Back To Home</a>
+   <br />
+ <link href="~/css/FormDesign.css" rel="stylesheet" />
+    <div class="container">
+        <form action="Register" method="post">
+
+            <div class="row">
+                <div class="col-25">
+                    <label for="Student">Students</label>
+                </div>
+
+                <div class="col-75">
+                    <select id="sudentId" name="StudentId" >
+                        @foreach (Students students in Model.students)
+                        {
+                            <option value="@students.StudentId">@students.StudentName</option>
+                        }
+                    </select>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-25">
+                    <label for="Teacher">Courses</label>
+                </div>
+
+                <div class="col-75">
+                    <select id="courseId " name="CourseId" >
+                        @foreach (Course course in Model.courses)
+                        {
+                            <option value="@course.CourseId">@course.CourseName</option>
+                        }
+                    </select>
+                </div>
+            </div>
+
+            <div class="row">
+                <input type="submit" value="Register">
+            </div>
+
+        </form>
+
+    </div>
+
+
+

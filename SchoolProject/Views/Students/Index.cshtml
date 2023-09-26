@@ -1,0 +1,42 @@
+﻿@model List<Students>
+<link href="~/css/Table.css" rel="stylesheet" />
+<a class="nav-link text-dark" asp-area="" asp-controller="Students" asp-action="Create">Add New Student</a>
+<table>
+    <tr>
+        <th>
+            Student Name
+        </th>
+        <th>
+            Student Age
+        </th>
+        <th>
+            Image
+        </th>
+        <th>
+            Delete
+        </th>
+    </tr>
+    @foreach (Students students in Model)
+    {
+        <tr>
+            <td>
+                @students.StudentName
+            </td>
+            <td>
+                @students.StudentAge
+            </td>
+            <td>
+                <img src="/StudentPictures/@students.photoName" width="50" height="50" />
+            </td>
+            <td>
+                <a href="Students/Delete/@students.StudentId">X</a>
+            </td>
+        </tr>
+    }
+
+</table>
+
+<br />
+@ViewBag.username
+<br />
+@ViewData["Message"]
